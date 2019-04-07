@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/admin_login_layout"
     tools:context=".activities.LoginActivity">
 
     <TextView
@@ -29,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="15"
+            android:inputType="textEmailAddress"
             android:hint="@string/email"
             android:textSize="@dimen/normal_text" />
 
@@ -48,12 +50,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="15"
+            android:inputType="textPassword"
             android:hint="@string/password"
             android:textSize="@dimen/normal_text" />
 
     </android.support.design.widget.TextInputLayout>
 
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/probar_login"
+        android:indeterminate="true"
+        android:layout_marginBottom="@dimen/margin_tiny"
+        app:layout_constraintBottom_toTopOf="@id/input_login_email"
+        app:layout_constraintRight_toRightOf="@id/input_login_password"
+        app:layout_constraintLeft_toLeftOf="@id/input_login_password"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
     <Button
+        android:onClick="admin_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_small"
