@@ -16,7 +16,24 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="admin_login">Admin Login</string>
-    <string name="laundry_set">Laundry Management</string>
+    <string name="managment_set">Management</string>
     <string name="admin_txt">Administrator</string>
     <string name="add_service_txt">Add Service</string>
+    <string name="save_lbl">Save</string>
+    <string name="enter_name">Enter Service Name</string>
+    <string name="req_name">Name</string>
+    <string name="cancel_lbl">Cancel</string>
+    <string name="select_lbl">Select…</string>
+    <string name="serv_name_lbl">Service Name</string>
+    <string name="select_service">Select Service</string>
+    <string name="no_show">Nothing to show</string>
+    <string name="service">Service</string>
+    <string name="add_item">Add item</string>
+    <string name="item">Item</string>
+    <string name="price_lbl">Price</string>
+    <string name="popmenu_active">Mark Active</string>
+    <string name="popmenu_deliv">Mark Ready for Delivery</string>
+    <string name="popmenu_complt">Mark Completed</string>
+    <string name="popmenu_order">View Order</string>
+    <string name="laundrylist_lbl">Laundry List</string>
 </resources>

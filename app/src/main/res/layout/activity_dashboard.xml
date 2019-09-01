@@ -10,10 +10,12 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recy_orders"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fab_logout"
+        android:layout_marginBottom="@dimen/margin_tiny"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="32dp" />
+        />
 
     <TextView
         android:id="@+id/tv_no_req"
@@ -28,11 +30,11 @@
         android:id="@+id/fab_settings"
         android:onClick="setup_laundry"
         android:src="@drawable/ic_settings_white_24dp"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_marginBottom="@dimen/margin_med"
+        android:layout_marginEnd="@dimen/margin_med"
+        android:layout_marginBottom="@dimen/margin_small"
         app:fabSize="mini"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fab_logout"
+        app:layout_constraintRight_toLeftOf="@id/fab_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

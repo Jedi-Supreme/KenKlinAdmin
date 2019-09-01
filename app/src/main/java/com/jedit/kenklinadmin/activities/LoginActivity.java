@@ -8,13 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.jedit.kenklinadmin.R;
-import com.jedit.kenklinadmin.common_code;
+import com.jedit.kenklinadmin.common;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,10 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     void testInputs() {
 
         if (et_login_email.getText().toString().isEmpty() || et_login_email.getText().toString().equals("")) {
-            common_code.Mysnackbar(findViewById(R.id.admin_login_layout), "Enter Valid Email", Snackbar.LENGTH_SHORT).show();;
+            common.Mysnackbar(findViewById(R.id.admin_login_layout), "Enter Valid Email", Snackbar.LENGTH_SHORT).show();
 
         } else if (et_login_password.getText().toString().isEmpty() || et_login_password.getText().toString().equals("")) {
-            common_code.Mysnackbar(findViewById(R.id.admin_login_layout), "Enter Password", Snackbar.LENGTH_SHORT).show();
+            common.Mysnackbar(findViewById(R.id.admin_login_layout), "Enter Password", Snackbar.LENGTH_SHORT).show();
 
         } else {
             login_with_credentials(et_login_email.getText().toString(), et_login_password.getText().toString());
@@ -72,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         // If sign in fails, display a message to the user.
                         if (task.getException() instanceof FirebaseAuthInvalidUserException) {
 
-                                common_code.Mysnackbar(findViewById(R.id.admin_login_layout), "Invalid Email Address",
+                                common.Mysnackbar(findViewById(R.id.admin_login_layout), "Invalid Email Address",
                                         Snackbar.LENGTH_SHORT).show();
 
                             probar_login.setVisibility(View.INVISIBLE);
@@ -80,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         } else if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
 
-                            common_code.Mysnackbar(findViewById(R.id.admin_login_layout), "Wrong Password",
+                            common.Mysnackbar(findViewById(R.id.admin_login_layout), "Wrong Password",
                                     Snackbar.LENGTH_SHORT).show();
 
                             probar_login.setVisibility(View.INVISIBLE);

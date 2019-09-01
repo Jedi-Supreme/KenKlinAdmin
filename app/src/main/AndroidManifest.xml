@@ -16,7 +16,7 @@
             android:name=".activities.LoginActivity"/>
 
         <activity
-            android:label="@string/laundry_set"
+            android:label="@string/managment_set"
             android:name=".activities.SetupActivity" />
 
         <activity
